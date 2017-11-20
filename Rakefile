@@ -1,76 +1,60 @@
-require "bundler/gem_tasks"
-require "jekyll"
-require "listen"
+require 'rake-jekyll'
 
-def listen_ignore_paths(base, options)
-  [
-    /_config\.ya?ml/,
-    /_site/,
-    /\.jekyll-metadata/
-  ]
-end
+Rake::Jekyll::GitDeployTask.new(:deploy) do |t|
 
-def listen_handler(base, options)
-  site = Jekyll::Site.new(options)
-  Jekyll::Command.process_site(site)
-  proc do |modified, added, removed|
-    t = Time.now
-    c = modified + added + removed
-    n = c.length
-    relative_paths = c.map{ |p| Pathname.new(p).relative_path_from(base).to_s }
-    print Jekyll.logger.message("Regenerating:", "#{relative_paths.join(", ")} changed... ")
-    begin
-      Jekyll::Command.process_site(site)
-      puts "regenerated in #{Time.now - t} seconds."
-    rescue => e
-      puts "error:"
-      Jekyll.logger.warn "Error:", e.message
-      Jekyll.logger.warn "Error:", "Run jekyll build --trace for more information."
-    end
-  end
-end
+  # Description of the rake task.
+  t.description = 'Generate the site and push changes to remote repository'
 
-task :preview do
-  base = Pathname.new('.').expand_path
-  options = {
-    "source"        => base.join('test').to_s,
-    "destination"   => base.join('test/_site').to_s,
-    "force_polling" => false,
-    "serving"       => true,
-    "theme"         => "minimal-mistakes-jekyll"
+  # Overrides the *author* of the commit being created with author of the
+  # source commit (i.e. HEAD in the current branch).
+  t.author = -> {
+    `git log -n 1 --format='%aN <%aE>'`.strip
   }
+  # Overrides the *author date* of the commit being created with date of the
+  # source commit.
+  t.author_date = -> {
+    `git log -n 1 --format='%aD'`.strip
+  }
+  # The commit message will contain hash of the source commit.
+  t.commit_message = -> {
+    "Built from #{`git rev-parse --short HEAD`.strip}"
+  }
+  # Use 'Jekyll' as the default *committer* name (with empty email) when the
+  # user.name is not set in git config.
+  t.committer = 'Jekyll'
 
-  options = Jekyll.configuration(options)
+  # Deploy the built site into remote branch named 'gh-pages', or 'master' if
+  # the remote repository URL matches `#{gh_user}.github.io.git`.
+  # It will be automatically created if not exist yet.
+  t.deploy_branch = -> {
+    gh_user = ENV['TRAVIS_REPO_SLUG'].to_s.split('/').first
+    remote_url.match(/[:\/]#{gh_user}\.github\.io\.git$/) ? 'master' : 'gh-pages'
+  }
+  # Run this command to build the site.
+  t.build_script = ->(dest_dir) {
+    puts "\nRunning Jekyll..."
+    sh "bundle exec jekyll build --destination #{dest_dir}"
+  }
+  # Use the default committer (configured in git) when available.
+  t.override_committer = false
 
-  ENV["LISTEN_GEM_DEBUGGING"] = "1"
-  listener = Listen.to(
-    base.join("_data"),
-    base.join("_includes"),
-    base.join("_layouts"),
-    base.join("_sass"),
-    base.join("assets"),
-    options["source"],
-    :ignore => listen_ignore_paths(base, options),
-    :force_polling => options['force_polling'],
-    &(listen_handler(base, options))
-  )
-
-  begin
-    listener.start
-    Jekyll.logger.info "Auto-regeneration:", "enabled for '#{options["source"]}'"
-
-    unless options['serving']
-      trap("INT") do
-        listener.stop
-        puts "     Halting auto-regeneration."
-        exit 0
-      end
-
-      loop { sleep 1000 }
-    end
-  rescue ThreadError
-    # You pressed Ctrl-C, oh my!
-  end
-
-  Jekyll::Commands::Serve.process(options)
+  # Use URL of the 'origin' remote to fetch/push the built site into. If env.
+  # variable GH_TOKEN is set, then it adds it as a userinfo to the URL.
+  t.remote_url = -> {
+    url = `git config remote.origin.url`.strip.gsub(/^git:/, 'https:')
+    next url.gsub(%r{^https://([^/]+)/(.*)$}, 'git@\1:\2') if ssh_key_file?
+    next url.gsub(%r{^https://}, "https://#{ENV['GH_TOKEN']}@") if ENV.key? 'GH_TOKEN'
+    next url
+  }
+  # Skip commit and push when building a pull request, env. variable
+  # SKIP_DEPLOY represents truthy, or env. variable SOURCE_BRANCH is set, but
+  # does not match TRAVIS_BRANCH.
+  t.skip_deploy = -> {
+    ENV['TRAVIS_PULL_REQUEST'].to_i > 0 ||
+      %w[yes y true 1].include?(ENV['SKIP_DEPLOY'].to_s.downcase) ||
+      (ENV['SOURCE_BRANCH'] && ENV['SOURCE_BRANCH'] != ENV['TRAVIS_BRANCH'])
+  }
+  # Path of the private SSH key to be used for communication with the
+  # repository defined by remote_url.
+  t.ssh_key_file = '.deploy_key'
 end

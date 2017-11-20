@@ -1,7 +1,9 @@
 language: ruby
 cache: bundler
 install:
+- chmod +x build.sh
 - bundle install
+
 script:
 - "./build.sh"
 env:

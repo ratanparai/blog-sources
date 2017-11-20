@@ -1,7 +1,9 @@
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  target_branch: master
-  on:
-    branch: dev
+language: ruby
+cache: bundler
+install:
+- bundle install
+script:
+- "./build.sh"
+env:
+  global:
+    secure: iEgVoTvk2op2aeCVGmp8md5qGSqdpZH5kx+Ye4yuRaVuR/m+jujZTgugxV8Hv1fi1ZLjBkqvKxg+c6IgWAQdtUliHk1rFS/hVYHGJCzV9McyK+9QzXPCrEEE7qfRoW7ayBZUhzlUx+WJ6FPgosXH/d9x5QJjJGVUDUylSF16zEhSC0y8u/eVdgJEKhptsX8f2yokVsUBelE+fQT/T4MeI6fkfU5Y+hX1Z19O9i1F1oft5P12xzerXy7nhKlQe5l/3q7CXmrQyauxWAXOkYZmCqOmhbb420udqe2kEpS49gU1C7UvlUrXyPna+jlzfON5nlOzRrzRmyvn2i6n6y2qCAY9VkUnCIKfsJ1HQ3CNuCWSv0tVR9uPigbARO5WM/fG2C+NWuOm0EK03kdEuvbYFqnYD5xF+KDacjn9ClVxcH2NV/UeZwiQEdFOFzIu202JvdbaKCx09oGXkJBV7h/5LpVMiew4ZbwI5LD8ZWYyRJQ5yfj9S3H0iBILW71vHf+jsxezFPO/A40EFieO2ElkuWREKGHeyQo0E43qnGSdUUEUD3aq9U2N56Dj5jMSCVwJkRB+QxItvNnpuyY+Ez0lahJqLL62MfJ3ORJ+okdPToC9CKTwh8YpbNp43iJCMNcb/pQs/84HIQ+73FxxpCeXtYznRwwBZPd9IlKBUPKT5bY=

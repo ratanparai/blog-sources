@@ -3,7 +3,11 @@ layout: single
 title: SSL certificate for Intranet network
 excerpt: SSL (read HTTPS) encrypted internal website for security is must for banking solution. This is how I solved the problem. 
 date: 2017-08-18 12:44:00 +0600
-tags: https,intranet-ssl,ssl,openssl
+tags: 
+    - https
+    - intranet-ssl
+    - ssl
+    - openssl
 toc: true
 ---
 ## Setup OpenSSL

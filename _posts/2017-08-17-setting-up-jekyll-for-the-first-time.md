@@ -2,7 +2,8 @@
 layout: single
 title: Setting up Jekyll for the first time
 date: 2017-08-18 00:32:00 +0600
-categories: Jekyll
+categories: 
+    - Jekyll
 excerpt: My first experience with Jekyll and how I am stating to love it
 comments: true
 ---

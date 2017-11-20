@@ -2,8 +2,12 @@
 layout: single
 title: Change ssh port of CentOS 7 
 date: 2017-11-08 00:32:00 +0600
-categories: Linux
+categories: 
+    - Linux
 excerpt: Change ssh port of CentOS 7 
+tags:
+    - CentOS 7
+    - SSH
 ---
 To change SSH port of CentOS 7 please follow those steps-
 

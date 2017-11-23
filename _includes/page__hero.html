@@ -53,7 +53,12 @@
       {% endif %}
     </div>
   {% else %}
-    <img src="{{ img_path }}" alt="{{ image_description }}" class="page__hero-image">
+
+    {% responsive_image_block %}
+      path: {{ page.header.image }}
+      alt: {{ image_description }}
+      class: page__hero-image
+    {% endresponsive_image_block %}
   {% endif %}
   {% if page.header.caption %}
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>

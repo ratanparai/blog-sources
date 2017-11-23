@@ -4,16 +4,18 @@ title: Responsive image on jekyll
 date: 2017-11-24 01:32:00 +0600
 categories: 
     - Jekyll
-excerpt: My first experience with Jekyll and how I am stating to love it
 comments: true
 tags:
     - responsive image
     - jekyll plugin
     - lazysizes
 toc: true
+header:
+  image: assets/images/Rio.jpg
 ---
+Responsive image make your website faster by loading the image that is required for the screen. Loading high quality image in every screen size is not optimal. Also showing a low quality blur version of the image while the real image is loading also improve the readability.
 ## Installation
-### Install jekyll-responsive-image plugin
+### jekyll-responsive-image plugin
 First, add -
 
 ```ruby
@@ -177,7 +179,7 @@ To insert image in a post use
 where  `assets/images/Rio.jpg` is your image path. This will take care of everything. Now you can enjoy responsive image in your blog.
 
 ## Testing
-here normal image
+Here is a normal image-
 ![rio](/assets/images/Rio.jpg)
 
 and here is a responsive image with lazy loading enabled

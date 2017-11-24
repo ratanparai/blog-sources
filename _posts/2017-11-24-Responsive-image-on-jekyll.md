@@ -45,7 +45,7 @@ Last, install the plugin by running
 bundle install
 ```
 
-**Please Note:** If there is an error while installing the plugin plese run `sudo apt-get install libmagickwand-dev` to install required library and try again.
+**Please Note:** If there is an error while installing the plugin plese run `sudo apt-get install libmagickwand-dev` to install required library and try again. And if you are on windows follow this step [How To Install The RMagick #RubyOnRails Gem on Windows 7 / 8 / 10 (ImageMagick 6.9.4 Q16-HDRI)](https://medium.com/ruby-on-rails-web-application-development/install-rmagick-gem-on-windows-7-8-10-imagemagick-6-9-4-q16-hdri-5492c3fef202)
 {: .notice--danger}
 
 ## Configuration

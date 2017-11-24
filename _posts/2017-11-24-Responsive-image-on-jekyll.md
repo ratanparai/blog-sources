@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Responsive image on jekyll
-date: 2017-11-24 01:32:00 +0600
+date: 2017-11-24 10:52:00 +0600
 categories: 
     - Jekyll
 comments: true
@@ -140,7 +140,7 @@ You need to add lazysizes js file to your website. To do this, download the `min
 ```
 
 **Please Note:** I am using [`minimal mistake`](https://github.com/mmistakes/minimal-mistakes) theme. So I added the `js` file in `_includes>scripts.html` after the `main.min.js` include code
-{: .notice--warning}
+{: .notice--danger}
 
 ### CSS modification
 Now add those line to your css file for blur effect for smoth image pixel
@@ -184,3 +184,6 @@ Here is a normal image-
 
 and here is a responsive image with lazy loading enabled
 {% responsive_image path: assets/images/Rio.jpg %}
+
+**Please Note:** This may not work with `Github Pages` directly. You need to host your own jekyll site or use third party CI tool to build the site. I am using [Travis ci](https://travis-ci.com/) for my blog. If you have any question feel free to ask me. 
+{: .notice--danger}

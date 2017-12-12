@@ -2,6 +2,8 @@
 main:
   - title: "Home"
     url: /
+#  - title: "Java"
+#    url: /categories/java/
   - title: "Search"
     url: /search/
   - title: "About"

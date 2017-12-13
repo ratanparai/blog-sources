@@ -136,7 +136,7 @@ test.finalizedBy jacocoTestReport
 
 Now run `gradle build` or `gradle test` to generate the **Code Coverage Report**. The **Code Coverage Report** can be found in **build>reports>jacoco>test>html**. Open the `index.html` file here to view the **Coverage Report**
 
-{% responsive_image path: assets/images/jacoco-report.jpg %}
+{% responsive_image path: assets/images/jacocoReport.jpg %}
 
 **Please Note:** We can use `JaCoCo` to generate `Code Coverage Report` for **Continuous Code Quality** tools like **SonarQube**[^2]. I will discuss about it in future articles.
 {: .notice--danger}

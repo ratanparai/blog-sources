@@ -198,6 +198,7 @@ plugins:
   - jemoji
   - jekyll-archives
   - jekyll-responsive-image
+  - jekyll-offline
 
 # mimic GitHub Pages with --safe
 whitelist:

@@ -4,6 +4,3 @@ comments:
 
 analytics:
   provider: false
-
-offline:
-  strategy: network-only

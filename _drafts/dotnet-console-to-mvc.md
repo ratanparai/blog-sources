@@ -1,3 +1,18 @@
+---
+layout: single
+title: Dotnet Core
+date: 2017-12-31 00:52:00 +0600
+categories:
+    - Dotnet
+comments: true
+tags:
+    - responsive image
+    - jekyll plugin
+    - lazysizes
+toc: true
+header:
+  image: assets/images/dotnecore.png
+---
 # Create dotnet console app
 
 ```bash
@@ -114,4 +129,3 @@ dotnet publish -c Release -r win10-x64
 List of runtime identifiers can be found in [.NET Core RID Catalog](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog)
 
 **Please Note:** Read more about [.NET Core application deployment](https://docs.microsoft.com/en-us/dotnet/core/deploying/)
-{: .notice--danger }

@@ -63,7 +63,7 @@ naver-site-verification  :
 twitter:
   username               : ratanparai
 facebook:
-  username               : 
+  username               :
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -98,7 +98,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "ratanparai"
+  facebook         :
   foursquare       :
   github           : "ratanparai"
   gitlab           :

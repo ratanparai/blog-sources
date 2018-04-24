@@ -5,14 +5,14 @@ toc: true
 author_profile: true
 ---
 
-> **“Never memorize something that you can look up.”** 
-> 
+> **“Never memorize something that you can look up.”**
+>
 > *― Albert Einstein*
 
 <iframe src='https://codealike.com/Profile/FactsWidget/ratanparai' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' width='600px' height='370px'></iframe>
 
 
-Super nerd who loves Vim and customize all of the development environment. Love to take challenge for devising a better problem-solving method while learning new technologies and tools as needed.
+Super nerd who loves to customize all of the development environment. Love to take challenge for devising a better problem-solving method while learning new technologies and tools as needed.
 
 ## Work History
 
@@ -21,7 +21,17 @@ Super nerd who loves Vim and customize all of the development environment. Love 
 | **GinilabLtd.** | *Mobile App Developer* | April, 2017 - May, 2017|
 
 ## Projects
-<`running`/> **HRMBot**; Leads Corporation LTD; *AI powered bot for HR department with Facebook and Skype integration*; C# dotnet, LUIS, bot framework, bot builder, rasa_nlu
+<`running`/> **ATM middleware for BankUltimas**; Leads Corporation Ltd; *Improve existing middleware performance by implementing multithreading and other optimizations*; Java
+
+<`running`/> **ATM Simulator**; Leads Corporation Ltd; *A simulator to measure performance of ATM middleware of BankUltimus using ISO8583 protocol like real ATM Switch*; Java, Dagger2 for DI
+
+<`running`/> **Leads Bank Bot**; Leads Corporation Ltd; *Chat bot that can perform various banking task like- Balance Check, Transfer money, pay utility bills and more*; C#, Bot Builder SDK, LUIS
+
+<`running`/> [**Academia**](https://github.com/techcombd/academia); Microsoft Technical Community Bangladesh; *Developer and Maintainer*; C#, dotnet core, Angular5, docker, CI/CD with travis and appveyor
+
+<`running`/> [**Asset-Manager**](https://github.com/techcombd/asset-manager); Microsoft Technical Community Bangladesh; *Code Review and Maintainer*; C#, dotnet core
+
+</> **HRMBot**; Leads Corporation LTD; *AI powered bot for HR department with Facebook and Skype integration*; C# dotnet, LUIS, bot framework, bot builder, rasa_nlu
 
 </> **Anti-Skimming**; *Prime Bank Ltd.*; ASP.NET Mvc, Microsoft SQL Server, Entity Framework, Identity Framework, OAuth 2.0, root CA SSL cert, Java, Kotlin, HTML, CSS, JavaScript
 

@@ -1,7 +1,6 @@
 ---
 layout: single
-title: Bazel build for c++
-date: 2017-12-06 9:32:00 +0600
+title: Unit Testing With C++
 categories:
     - C++
 tags:
@@ -9,6 +8,13 @@ tags:
 excerpt: Bazel build engine for c++
 comments: true
 ---
+For last couple of months I am in love with writing `Unit Tests`. I wasn't like that. You may say I was adventurous, hardcore and love living dangerous life! But that wasn't the case, believe me. I was just plain dumb. So how was my life before I started writing `Unit Tests`?
+
+I was so afraid to refactor my codes. There is a high possibility it may break something else in somewhere that I will not be able to detect soon. But eventually when I will do, it will be very hard to trace why it is broken and fix it. Nobody around me told me to write `Unit Tests` and few who did, didn't even write `Unit Tests` when they code! It was like [Aesob](https://en.wikipedia.org/wiki/Aesop)'s [The Two Crabs](https://fablesofaesop.com/the-two-crabs.html) story I read at my childhood. It was a mess.
+
+{% responsive_image path: assets/images/the-two-crab-aesop.jpg %}
+
+
 > Build and test software of any size, quickly and reliably
 
 Contet of `WORKSPACE` file -

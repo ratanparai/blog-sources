@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Writing unit tests for C++ with Bazel
+title: Writing unit tests for C++ with Bazel and GoogleTest
 date: 2018-04-29 03:05:00 +0600
 categories:
     - C++

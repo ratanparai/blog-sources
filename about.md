@@ -22,15 +22,17 @@ Super nerd who loves to customize all of the development environment. Love to ta
 | **GinilabLtd.** | *Mobile App Developer* | April, 2017 - May, 2017|
 
 ## Projects
-<`running`/> **ATM middleware for BankUltimas**; Leads Corporation Ltd; *Improve existing middleware performance by implementing multithreading and other optimizations*; Java
-
-<`running`/> **ATM Simulator**; Leads Corporation Ltd; *A simulator to measure performance of ATM middleware of BankUltimus using ISO8583 protocol like real ATM Switch*; Java, Dagger2 for DI
-
-<`running`/> **Leads Bank Bot**; Leads Corporation Ltd; *Chat bot that can perform various banking task like- Balance Check, Transfer money, pay utility bills and more*; C#, Bot Builder SDK, LUIS
+<`running`/> **Next Generation Financial Solution**; Development of Cloud ready Core Banking Software; Microservice; *Java*, *EmberJS*,  *OpenShift*, *GoLang* 
 
 <`running`/> [**Academia**](https://github.com/techcombd/academia); Microsoft Technical Community Bangladesh; *Developer and Maintainer*; C#, dotnet core, Angular5, docker, CI/CD with travis and appveyor
 
 <`running`/> [**Asset-Manager**](https://github.com/techcombd/asset-manager); Microsoft Technical Community Bangladesh; *Code Review and Maintainer*; C#, dotnet core
+
+</> **ATM middleware for BankUltimas**; Leads Corporation Ltd; *Improve existing middleware performance by implementing multithreading and other optimizations*; Java
+
+</> **ATM Simulator**; Leads Corporation Ltd; *A simulator to measure performance of ATM middleware of BankUltimus using ISO8583 protocol like real ATM Switch*; Java, Dagger2 for DI
+
+</> **Leads Bank Bot**; Leads Corporation Ltd; *Chat bot that can perform various banking task like- Balance Check, Transfer money, pay utility bills and more*; C#, Bot Builder SDK, LUIS
 
 </> **HRMBot**; Leads Corporation LTD; *AI powered bot for HR department with Facebook and Skype integration*; C# dotnet, LUIS, bot framework, bot builder, rasa_nlu
 

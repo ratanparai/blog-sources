@@ -13,8 +13,15 @@ toc: true
 
 In this blog post I am going to discuss about how to send message between two java spring boot application using RabbitMQ message broker. 
 
+## Prerequisite
+1. Install [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html){:target="_blank"}
+3. Install [maven](https://maven.apache.org/){:target="_blank"}
+2. Install Visual Studio Code (Optional)
+
 ## Create initial spring boot applicaiton(two)
-from  spring boot initializer website with amqp (rabbitmq) dependency
+From [Spring Initializr](https://start.spring.io/) website generate two project with `Web` and `RabbitMQ` dependencies. 
+
+{% responsive_image path: assets/images/generate-spring-boot-maven-project.png %}
 
 ## Write message publisher
 

@@ -18,10 +18,27 @@ In this blog post I am going to discuss about how to send message between two ja
 3. Install [maven](https://maven.apache.org/){:target="_blank"}
 2. Install Visual Studio Code (Optional)
 
+
+
+## Choosing the Message Broker
+
+### Exchange types
+
+
+
+### Why we choose `Topic Exchange`
+
+
+
 ## Create initial spring boot applicaiton(two)
+
 From [Spring Initializr](https://start.spring.io/) website generate two project with `Web` and `RabbitMQ` dependencies. 
 
 {% responsive_image path: assets/images/generate-spring-boot-maven-project.png %}
+
+
+
+
 
 ## Write message publisher
 
@@ -29,6 +46,12 @@ From [Spring Initializr](https://start.spring.io/) website generate two project 
 {: .notice--danger}
 
 ## Write message receiver
+
+
+
+## Conclusion
+
+
 
 
 

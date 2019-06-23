@@ -16,7 +16,8 @@ Super nerd who loves to customize all of the development environment. Love to ta
 
 ## Work History
 
-| **Leads Corporation Ltd.** | *Senior Software Engineer* | May , 2018 - Present|
+| **SELISE rockin' software** | *Senior Software Engineer* | May, 2019 - Present |
+| **Leads Corporation Ltd.** | *Senior Software Engineer* | May , 2018 - April, 2019|
 | **Leads Corporation Ltd.** | *Software Engineer* | July , 2017 - April, 2018|
 | **Leads Corporation Ltd.** | *Software Engineer Intern* | May, 2017 - June, 2017|
 | **GinilabLtd.** | *Mobile App Developer* | April, 2017 - May, 2017|

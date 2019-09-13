@@ -8,11 +8,20 @@ toc: true
 header:
   image: assets/images/dotnecore.png
 ---
+
+# Create a Project folder
+
+Create a folder where you want to store the console project in your computer. From inside the folder `right click` anywhere and select `Open with VS Code` 
+
 # Create dotnet console app
+
+In VS code console, run the command -
 
 ```bash
 dotnet new console
 ```
+
+> If Console window is not open in VS Code, then you can open it by pressing <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>~</kbd>.
 
 this will create **dotnet core** console application. There should be two file `[projectName].csproj` and `Program.cs`, where `[projectName]` is the name of the working folder. Lets look at the content of those two files
 

@@ -17,6 +17,8 @@ In this series of blog articles, we are going to start from a basic **dotnet cor
 3. [.NET Core SDK 3.0.101](https://dotnet.microsoft.com/download/dotnet-core/3.0), which is the latest stable version of .NET Core SDK.
 4. [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/) or [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/), we are going to use docker to develop, run and deploy our microservices
 
+We will build a E-commerce Web Application. 
+
 To jump throw the list of articles follow the links bellow - 
 
 <!-- 1. [Part 1: MVC Application]({% post_url 2017-08-17-setting-up-jekyll-for-the-first-time %}) -->

@@ -31,3 +31,30 @@ git clone git@github.com:ratanparai/eCommerce-microservices-tutorial.git
 
 ## Setup initial project structure
 
+Open the locally cloned repository folder in `VSCode` and open the `VSCode` (Check [VSCode Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) for more info) terminal window. The rest of today's tutorial we will use the `VSCode` terminal and `dotnet` command line to tool to setup the initial structure and projects.
+
+You should see similar to this window-
+
+{% responsive_image path: assets/images/microservices-tutorials/visual-studio.png %}
+
+### Create global.json file
+
+Global.json file is used to select the correct .NET Core SDK version to build and run .NET Core application if you have multiple SDK version.
+
+```bash
+dotnet new globaljson --sdk-version 3.0.100
+```
+
+### Create solution file
+
+<!-- TODO:  Write why we need solution file here -->
+
+```bash
+dotnet new sln
+```
+
+### Create Projects
+
+
+
+

@@ -97,5 +97,52 @@ After running application, you should see a webpage with the content similar to 
 Congratulation, you have successfully created a `.NET Core MVC` web application. If you want to use **Visual Studio**, you can open the solution file (*.sln. For this tutorial `eCommerce-microservices-tutorial.sln` file) in Visual Studio and do the rest of the tutorial in Visual Studio too.  
 
 
+Install EF Core by `cd` into the `src/Web/WebMVC` directory and running -
 
+```bash
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+```
+
+Now create a folder named `Infrastructure` and inside the folder create a `Class` named `CatalogContext` with the code -
+
+```cs
+using Microsoft.EntityFrameworkCore;
+using WebMVC.Models;
+
+namespace WebMVC.Infrastructure
+{
+    public class CatalogContext
+        : DbContext
+    {
+        public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
+        {
+        }
+
+        public DbSet<CatalogItem> CatalogItems { get; set; }
+    }
+}
+```
+
+Our DbContext class need to extend the `DbContext` class and in `constructor` parameter need to pass the `DbContextOptions<{Our_Class_Name}>` to the base class.
+
+Now we need to inject our `CatalogContext` class in `startup.cs` file -
+
+```cs
+...
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddDbContext<CatalogContext>(options =>
+    {
+        options.UseSqlite("Data Source=catalog.db");
+    });
+
+    services.AddControllersWithViews();
+}
+
+...
+```
+
+**Please Note:** To know how dependency injection works in ASP.NET Core please read [Dependency injection in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.0)
+{: .notice--danger}
 

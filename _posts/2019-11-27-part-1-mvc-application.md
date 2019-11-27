@@ -64,19 +64,19 @@ dotnet new sln
 
 ### Create Project
 
-Create folder for the project -
+Create folder for the project. This command will create three folders with the structure `src>Web>WebMVC` -
 
 ```bash
 mkdir -p src/Web/WebMVC
 ```
 
-This command will create three folder. Now create the `mvc` project -
+Now create the `mvc` project -
 
 ```bash
 dotnet new mvc --no-https -o src/Web/WebMVC
 ```
 
-Here, `--no-https` tell the dotnet cli to generate scaffolding code without the **https** support and the `-o src/Web/WebMVC` argument set the output directory to `src>Web>WebMVC`.
+Here, `--no-https` tell the dotnet cli to generate scaffolding code without the **https** support so our web application will only be served in `http`. This will make our life easier to create and run our application from **Docker** container later.  And the `-o src/Web/WebMVC` argument set the output directory to `src>Web>WebMVC`.
 
 Now lets add the project to the solution -
 

@@ -94,8 +94,15 @@ After running application, you should see a webpage with the content similar to 
 {% responsive_image path: assets/images/microservices-tutorials/part-one/welcome-page.png %}
 
 
-Congratulation, you have successfully created a `.NET Core MVC` web application. If you want to use **Visual Studio**, you can open the solution file (*.sln. For this tutorial `eCommerce-microservices-tutorial.sln` file) in Visual Studio and do the rest of the tutorial in Visual Studio too.  
+Congratulation, you have successfully created a `.NET Core MVC` web application. If you want to use **Visual Studio**, you can open the solution file (*.sln. For this tutorial `eCommerce-microservices-tutorial.sln` file) in Visual Studio and do the rest of the tutorial in Visual Studio too.
 
+## MVC CRUD Web Application
+In this part, we will create a MVC application that can `create`, `read`, `update` and `delete` data into database. For database, we are going to use `SQLite`. `SQLite` is a file based lightweight database which doesn't requires any special tools to be installed on your machine.
+
+### EF Core with SQLite
+
+`EF Core` is a powerful `ORM`. Using `ORM` we can skip the database specific `query` and change our `database` provider from `SQLite` to `Microsoft SQL Server` with almost no changes in our code. To know more about `EF Core` please check [Entity Framework Core
+](https://docs.microsoft.com/en-us/ef/core/).
 
 Install EF Core by `cd` into the `src/Web/WebMVC` directory and running -
 
@@ -143,6 +150,77 @@ public void ConfigureServices(IServiceCollection services)
 ...
 ```
 
+We also need to add the `catalog.db` file to `.gitignore` as this file will hold our *database* and we do not need to commit this file. Please add those two line in your `.gitignore` file as bellow -
+
+```shell
+# Ignoring all user generated DB files
+*.db
+```
+
+The first line is a comment, so that we understand what we are trying to do here and the second line is telling `git` to ignore any file with the file **extension** `.db`.
+
 **Please Note:** To know how dependency injection works in ASP.NET Core please read [Dependency injection in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.0)
 {: .notice--danger}
 
+### Scaffolding Controller with Views
+
+Now lets scaffold a CRUD controller with view. To add scaffolding support we need to install -
+
+```shell
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+```
+
+Please make sure the global scaffolding tool is installed -
+
+```shell
+dotnet tool install --global dotnet-aspnet-codegenerator
+```
+
+and then run -
+
+```shell
+dotnet aspnet-codegenerator controller -name CatalogController -m CatalogItem -dc CatalogContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+```
+
+### Database Migrations
+
+To run migration, please make sure you have the `dotnet-ef` global tool installed. If now then install it by running -
+
+```shell
+dotnet tool install --global dotnet-ef
+```
+
+Now create and apply migration -
+
+```shell
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+
+### Update Navigation bar
+
+And then add the new Controller in Navigation bar. To do this, please modfity the `Views>Shared>_Layout.cshtml` file and add another `nav-item` like - 
+
+```html
+<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Catalog" asp-action="Index">Catalog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </li>
+    </ul>
+</div>
+```
+
+## Conclusion
+
+Now run the application by pressing <kbd>F5</kbd> on `VSCode` *or* running the command `dotnet run` from *terminal*. Then go the Catalog page by clicking Catalog navbar and test our new Catalog `CRUD`.
+
+Congratulation, you have successfully created a `ASP.NET Core MVC` Web Application. 

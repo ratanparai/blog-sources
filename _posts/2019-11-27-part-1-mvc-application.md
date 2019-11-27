@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Part one: Getting started with asp.net core MVC"
+date: 2019-11-27 08:41:00 +0600
 categories:
     - Microservices
 comments: true
@@ -55,7 +56,7 @@ This also throw error if anyone try to build the code but do not have the specif
 
 ### Create solution file
 
-A solution is a structure for organizing projects in Visual Studio. Solution file itself doesn't do anything special. Although, you can build, run and deploy `.NET Core` application without the solution file, but having one make your projects much organized and easy to maintain. Although, we will only have one project at the beginning of this tutorial series, we will create and add more projects to the solution as we progress. 
+A solution is a structure for organizing projects in Visual Studio. Solution file itself doesn't do anything special. Although, you can build, run and deploy `.NET Core` application without the solution file, but having one make your projects much organized and easy to maintain. We will only have one project at the beginning of this tutorial series, we will create and add more projects to the solution as we progress. 
 
 ```bash
 dotnet new sln

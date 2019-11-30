@@ -5,8 +5,14 @@ date: 2019-11-27 08:41:00 +0600
 categories:
     - Microservices
 comments: true
+tags: 
+    - microservices
+    - dotnet core
 toc: true
 ---
+
+This is part one of the tutorial series [Zero to Hero in Microservices with dotnet core]({% post_url 2019-11-27-zero-to-hero-with-dotnet-core-microservice-introduction %}).
+
 Today, we will create a basic ASP.NET Core MVC web application. But before that lets create a github repository for our project
 
 ## Create & Clone GitHub repository
@@ -131,7 +137,7 @@ namespace WebMVC.Infrastructure
 }
 ```
 
-Our DbContext class need to extend the `DbContext` class and in `constructor` parameter need to pass the `DbContextOptions<{Our_Class_Name}>` to the base class.
+Our DbContext class need to extend the `DbContext` class and in `constructor` parameter need to pass the instance of `DbContextOptions<{Our_Class_Name}>` to the base class.
 
 Now we need to inject our `CatalogContext` class in `startup.cs` file -
 
@@ -165,6 +171,8 @@ The first line is a comment, so that we understand what we are trying to do here
 
 ### Scaffolding Controller with Views
 
+The term **Scaffolding** is used by many software technologies to mean *"quickly generating a basic outline of your software that you can then edit and customize"*.
+
 Now lets scaffold a CRUD controller with view. To add scaffolding support we need to install -
 
 ```shell
@@ -184,6 +192,8 @@ and then run -
 ```shell
 dotnet aspnet-codegenerator controller -name CatalogController -m CatalogItem -dc CatalogContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
 ```
+
+Here, in `-name` argument we need to pass the `Controller` name we want to generate, in `-m` pass the previously created `Model` class name and in `-dc` argument pass the name of our `DBContext` class name.
 
 ### Database Migrations
 
@@ -224,4 +234,4 @@ And then add the new Controller in Navigation bar. To do this, please modfity th
 
 Now run the application by pressing <kbd>F5</kbd> on `VSCode` *or* running the command `dotnet run` from *terminal*. Then go the Catalog page by clicking Catalog navbar and test our new Catalog `CRUD`.
 
-Congratulation, you have successfully created a `ASP.NET Core MVC` Web Application. 
+Congratulation, you have successfully created a `ASP.NET Core MVC` Web Application. The source code for today's tutorial can be found in [GitHub - eCommerce-microservices-tutorial: part-1](https://github.com/ratanparai/eCommerce-microservices-tutorial/tree/part-1)

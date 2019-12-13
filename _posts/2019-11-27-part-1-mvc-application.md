@@ -2,6 +2,7 @@
 layout: single
 title: "Part one: Getting started with asp.net core MVC"
 date: 2019-11-27 08:41:00 +0600
+last_modified_at: 2019-12-13T12:57:15+06:00
 categories:
     - Microservices
 comments: true
@@ -52,10 +53,10 @@ Global.json file is used to select the correct .NET Core SDK version to build an
 dotnet --list-sdks
 ```
 
-To work on .NET Core v 3.0, lets create a global.json file by running -
+To work on .NET Core v 3.1, lets create a global.json file by running -
 
 ```bash
-dotnet new globaljson --sdk-version 3.0.100
+dotnet new globaljson --sdk-version 3.1.100
 ```
 
 This also throw error if anyone try to build the code but do not have the specified version of SKD installed. It ensure the use of right SDK version.
@@ -105,6 +106,25 @@ Congratulation, you have successfully created a `.NET Core MVC` web application.
 
 ## MVC CRUD Web Application
 In this part, we will create a MVC application that can `create`, `read`, `update` and `delete` data into database. For database, we are going to use `SQLite`. `SQLite` is a file based lightweight database which doesn't requires any special tools to be installed on your machine.
+
+### Create Domain Models
+
+> A domain model is a conceptual model of the domain that incorporates both behavior and data
+
+Inside the `Models` folder create a new class named `CatalogItem` and add some [Auto-Implemented Properties](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties). We will improve this domain model in future tutorials, but for now, lets keep it simple -
+
+```cs
+public class CatalogItem
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public decimal Price { get; set; }
+    public int AvailableStock { get; set; }
+}
+```
+
+
 
 ### EF Core with SQLite
 
@@ -171,7 +191,7 @@ The first line is a comment, so that we understand what we are trying to do here
 
 ### Scaffolding Controller with Views
 
-The term **Scaffolding** is used by many software technologies to mean *"quickly generating a basic outline of your software that you can then edit and customize"*.
+> The term **Scaffolding** is used by many software technologies to mean *"quickly generating a basic outline of your software that you can then edit and customize"*.
 
 Now lets scaffold a CRUD controller with view. To add scaffolding support we need to install -
 
@@ -186,6 +206,9 @@ Please make sure the global scaffolding tool is installed -
 ```shell
 dotnet tool install --global dotnet-aspnet-codegenerator
 ```
+
+**Please Note:** If you have already installed any of the global tools before, please run `dotnet tool update --global <package-name>` instead of `dotnet tool install --global <package-name>` to ensure you global tools is up-to-date.
+{: .notice--danger}
 
 and then run -
 
@@ -232,6 +255,6 @@ And then add the new Controller in Navigation bar. To do this, please modfity th
 
 ## Conclusion
 
-Now run the application by pressing <kbd>F5</kbd> on `VSCode` *or* running the command `dotnet run` from *terminal*. Then go the Catalog page by clicking Catalog navbar and test our new Catalog `CRUD`.
+Now run the application by pressing <kbd>F5</kbd> on `VSCode` *or* running the command `dotnet run` from *terminal*. Then go the Catalog page by clicking Catalog navbar and test our new Catalog `CRUD`. In this page, you can create, read, update and delete catalog items! Explore them!
 
 Congratulation, you have successfully created a `ASP.NET Core MVC` Web Application. The source code for today's tutorial can be found in [GitHub - eCommerce-microservices-tutorial: part-1](https://github.com/ratanparai/eCommerce-microservices-tutorial/tree/part-1)

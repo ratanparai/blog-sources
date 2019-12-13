@@ -216,9 +216,6 @@ and then run -
 dotnet aspnet-codegenerator controller -name CatalogController -m CatalogItem -dc CatalogContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
 ```
 
-**Please Note:** If you face error - `Unhandled exception. System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.VisualStudio.Web.CodeGeneration.Utils, ...`, then you need to downgrade the `Microsoft.EntityFrameworkCore.Design` package to version `3.0.0`. To do this, open `WebMVC.csproj` and modify the package to `<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />`. You can track of the issue, [The new version of Microsoft.VisualStudio.Web.CodeGeneration.Design isn't compatible with dotnet core 3](https://github.com/aspnet/Scaffolding/issues/1185)
-{: .notice--danger}
-
 Here, in `-name` argument we need to pass the `Controller` name we want to generate, in `-m` pass the previously created `Model` class name and in `-dc` argument pass the name of our `DBContext` class name.
 
 ### Database Migrations

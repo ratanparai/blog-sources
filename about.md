@@ -23,11 +23,12 @@ Super nerd who loves to customize all of the development environment. Love to ta
 | **GinilabLtd.** | *Mobile App Developer* | April, 2017 - May, 2017|
 
 ## Projects
-<`running`/> **Next Generation Financial Solution**; Development of Cloud ready Core Banking Software; Microservice; *Java*, *EmberJS*,  *OpenShift*, *GoLang* 
 
-<`running`/> [**Academia**](https://github.com/techcombd/academia); Microsoft Technical Community Bangladesh; *Developer and Maintainer*; C#, dotnet core, Angular5, docker, CI/CD with travis and appveyor
+<'running'/> [**eSchool**](hhttps://github.com/opencodefoundation/eschool); Microsoft Technical Community Bangladesh; *Developer and Maintainer*; C#, dotnet core, Angular5, docker, CI/CD with travis and appveyor
 
-<`running`/> [**Asset-Manager**](https://github.com/techcombd/asset-manager); Microsoft Technical Community Bangladesh; *Code Review and Maintainer*; C#, dotnet core
+</> **Next Generation Financial Solution**; Development of Cloud ready Core Banking Software; Microservice; *Java*, *EmberJS*,  *OpenShift*, *GoLang* 
+
+</> [**Asset-Manager**](https://github.com/opencodefoundation/asset-manager); Microsoft Technical Community Bangladesh; *Code Review and Maintainer*; C#, dotnet core
 
 </> **ATM middleware for BankUltimas**; Leads Corporation Ltd; *Improve existing middleware performance by implementing multithreading and other optimizations*; Java
 

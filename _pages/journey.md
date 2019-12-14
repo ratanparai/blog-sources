@@ -31,7 +31,7 @@ permalink: /journey/
 
 ### February
 
-* **24.02.19** Organizing member and Speaker of `Microsoft Technology Day at BUBT` at `BUBT`. Topic `Deploy a web app in Azure Cloud `
+* **24.02.19** Keynote Speaker of `Microsoft Technology Day at BUBT` at `BUBT`. Topic `Deploy a web app in Azure Cloud `
 
 ### January 
 

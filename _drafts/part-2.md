@@ -16,6 +16,18 @@ CRUD to DDD
 
 ## Automatic Migrations
 
+In the previous tutorial, we have to apply migration by manually running the command `dotnet ef database update`. We need to do this automatically in container environment. We can run the migration programmatically by calling `{DBContext}.Database.Migrate()`, where `{DBContext}` is instance of our `DBContext` class (In our case instance of `CatalogContext` class).
+
+```cs
+using var scope = host.Services.CreateScope();
+
+var services = scope.ServiceProvider;
+
+var context = services.GetService<TContext>();
+var logger = services.GetRequiredService<ILogger<TContext>>();
+```
+
+
 ## Seed data
 
 ## Basket Domain

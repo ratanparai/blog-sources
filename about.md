@@ -11,9 +11,6 @@ author_profile: true
 >
 > *― Albert Einstein*
 
-<iframe src='https://codealike.com/Profile/FactsWidget/ratanparai' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' width='600px' height='370px'></iframe>
-
-
 Super nerd who loves to customize all of the development environment. Love to take challenge for devising a better problem-solving method while learning new technologies and tools as needed.
 
 ## Work History

@@ -5,5 +5,6 @@
 {% endcapture %}
 
 {% assign smallest = resized | sort: 'width' | first %}
+{% assign reader = resized[2] %}
 
-<img width="100%" src="/{{ smallest.path }}" alt="{{ alt }}" data-srcset="{{ srcset | strip_newlines }}" class="blur-up lazyautosizes lazyload {{ class }}">
+<img width="100%" src="/{{ smallest.path }}" data-src="/{{ reader.path }}" alt="{{ alt }}" data-srcset="{{ srcset | strip_newlines }}" class="blur-up lazyautosizes lazyload {{ class }}">

@@ -25,7 +25,8 @@ Super nerd who loves to customize all of the development environment. Love to ta
 
 <`running`/> [**eSchool**](https://github.com/opencodefoundation/eschool); Microsoft Technical Community Bangladesh; *Developer and Maintainer*; C#, dotnet core, Angular5, docker, CI/CD with travis and appveyor
 
-</> [**EcoHub**](https://www.myecohub.ch); SELISE rockin' software; *Team Lead*; EcoHub is the online platform for all those active in the Swiss insurance, pension and broker industry; *Event Sourcing*, *Azure Kubernetes Service(AKS)*, *Azure Service Bus*, *Azure CosmosDB*, *Azure API management*, *Azure Application Gateway*, *Azure DevOps*, *Azure Functions*, *Azure KeyVault*, *Azure App Configuration*, *Azure Active Directory*, *Azure Active Directory B2C*, *SAML 2.0*, *SOAP*
+</> [**EcoHub**](https://www.myecohub.ch); SELISE rockin' software; *Team Lead*; EcoHub is the online platform for all those active in the Swiss insurance, pension and broker industry; *Event Sourcing*, *.NET Core*, *Azure Kubernetes Service(AKS)*, *Azure Service Bus*, *Azure CosmosDB*, *Azure API management*, *Azure Application Gateway*, *Azure DevOps*, *Azure Functions*, *Azure KeyVault*, *Azure App Configuration*, *Azure Active Directory*, *Azure Active Directory B2C*, 
+*OpenID Connect*, *SAML 2.0*, *SOAP*
 
 </> **Next Generation Financial Solution**; Development of Cloud ready Core Banking Software; Microservice; *Java*, *EmberJS*,  *OpenShift*, *GoLang* 
 
